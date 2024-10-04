@@ -1,0 +1,43 @@
+@App_HostAddress = http://localhost:5190
+
+GET {{App_HostAddress}}/api/contacts
+
+###
+
+GET {{App_HostAddress}}/api/contacts/6
+
+###
+
+POST {{App_HostAddress}}/api/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Marcelo2",
+  "lastName": "Ferreira2",
+  "email": "marcelo2@gmail.com",
+  "phone": "1234567890",
+  "dateOfBirth": "2024-10-03T23:14:42.055Z",
+  "addressId": 2
+}
+###
+
+PUT {{App_HostAddress}}/api/contacts/9
+Content-Type: application/json
+
+{
+  "firstName": "MarceloUp",
+  "lastName": "FerreiraUp",
+  "email": "marceloup@gmail.com",
+  "phone": "1234567891",
+  "dateOfBirth": "2024-10-03T23:22:55.468Z",
+  "addressId": 2
+}
+###
+
+DELETE {{App_HostAddress}}/api/contacts/10
+
+###
+
+GET {{App_HostAddress}}/api/contacts?name=marcelo&birthdate=12/4/3
+
+###
